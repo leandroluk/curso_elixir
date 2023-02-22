@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "mix_task",
+      "name": "test",
+      "request": "launch",
+      "task": "test",
+      "taskArgs": [
+        "--trace"
+      ],
+      "startApps": true,
+      "projectDir": "${workspaceRoot}",
+    },
+    {
+      "type": "mix_task",
+      "name": "run",
+      "request": "launch",
+      "task": "run",
+      "taskArgs": [
+        "-e",
+        "${input:runArgs}"
+      ],
+      "startApps": true,
+      "projectDir": "${workspaceRoot}",
+    }
+  ],
+  "compounds": []
+}
