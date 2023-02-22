@@ -48,5 +48,11 @@ defmodule ExMonTest do
       assert messages =~ "status: :continue"
       assert messages =~ "turn: :player"
     end
+
+    test "when move is invalid, returns an error message" do
+      messages = capture_io(fn -> ExMon.make_move(:wrong) end)
+
+      assert messages =~ "Invalid move: wrong"
+    end
   end
 end
